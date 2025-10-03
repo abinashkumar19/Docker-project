@@ -1,8 +1,8 @@
-yum install docker -y
-systemctl start docker 
-systemctl status docker
-yum install git -y
-sudo yum install mariadb105-server -y
+#yum install docker -y
+#systemctl start docker 
+#systemctl status docker
+#yum install git -y
+#sudo yum install mariadb105-server -y
 
 
 sudo yum update -y            
