@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Python Flask Registration App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h2>Register</h2>
+  <form id="registerForm">
+    <input type="text" id="regUsername" placeholder="Username" required />
+    <input type="password" id="regPassword" placeholder="Password" required />
+    <button type="submit">Register</button>
+  </form>
+
+  <!-- Show details after registration -->
+  <div id="userDetails" style="margin-top:20px; display:none;">
+    <h3>Registration Successful!</h3>
+    <p><strong>ID:</strong> <span id="userId"></span></p>
+    <p><strong>Username:</strong> <span id="userName"></span></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
