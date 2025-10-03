@@ -1,47 +1,112 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Container */
+.container {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 40px;
+  border-radius: 20px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  width: 100%;
   max-width: 400px;
-  margin: 50px auto;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background: #f9f9f9;
-}
-
-h2 {
   text-align: center;
-  color: #333;
+  color: white;
 }
 
-form {
+/* Titles */
+h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.subtitle {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+/* Form */
+.form-card {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
+  margin-bottom: 20px;
 }
 
-input {
-  padding: 10px;
-  border: 1px solid #aaa;
-  border-radius: 5px;
+.input-group {
+  text-align: left;
 }
-
-button {
+.input-group label {
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+  display: block;
+}
+.input-group input {
+  width: 100%;
   padding: 10px;
-  background: #007bff;
+  border-radius: 8px;
   border: none;
+  outline: none;
+}
+
+/* Buttons */
+.btn {
+  background: #ff7eb3;
   color: white;
-  border-radius: 5px;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
   cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+}
+.btn:hover {
+  background: #ff5277;
+  transform: scale(1.05);
 }
 
-button:hover {
-  background: #0056b3;
+/* Messages */
+.message {
+  margin-top: 10px;
+  font-size: 0.95rem;
+}
+.message.error {
+  color: #ffdddd;
+}
+.message.success {
+  color: #ddffdd;
 }
 
-#userDetails {
+/* User Details Card */
+.user-card {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 20px;
+  border-radius: 12px;
   margin-top: 20px;
-  padding: 15px;
-  border: 1px solid #007bff;
-  border-radius: 5px;
-  background: #e6f0ff;
+  animation: fadeIn 0.5s ease-in-out;
+}
+.user-card p {
+  margin: 5px 0;
+}
+.hidden {
+  display: none;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
